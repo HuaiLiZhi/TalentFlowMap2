@@ -1,9 +1,8 @@
 package com.huailizhi.backend.controller;
 
-import com.huailizhi.backend.entity.City;
-import com.huailizhi.backend.service.CityService;
+import com.huailizhi.backend.entity.Country;
+import com.huailizhi.backend.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/cities")
-public class CityController {
+@RequestMapping("/api/countries")
+public class CountryController {
     @Autowired
-    private CityService cityService;
+    private CountryService countryService;
 
     @GetMapping
-    public List<City> getAllCities(){
-        return cityService.getAllCities();
+    public List<Country> getAllCities(){
+        return countryService.getAllCities();
     }
 }
